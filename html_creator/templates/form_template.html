@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)https://getbootstrap.com/docs/4.0/examples/grid/ -->
+<html lang="en" class="no-touch">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Форма CAN Test</title>
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/css/grid.css" rel="stylesheet">
+    
+
+<body>
+    <div class="container">
+        <img src="../static/img/starline-logo-min-600x125.png" class="img-fluid float-right w-25 " alt="Responsive image">
+
+        <h1>Отчет CAN Test № {{ Номер_формы }}</h1>
+        <h3>Основные данные</h3>
+
+        <table class="table border">
+            <tr>
+                <th scope="row">
+                    Отчет выполнил:
+                </th>
+                <td>
+                    {{ Фамилия }}<br><a href="mailto:{{ Электронная_почта }}">{{ Электронная_почта }}</a>
+                </td>
+            </tr>
+
+            <tr>
+                <th scope="row">
+                    Задача в Jira:
+                </th>
+                <td>
+                    <a href="https://jira.starline.ru/browse/{{ Задача_в_Jira }}">{{ Задача_в_Jira }}</a>
+
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <th scope="row">
+                    Версия ПО:
+                </th>
+                <td>
+                    {{ Версия_ПО }}
+                </td>
+            </tr>
+
+        </table>
+
+        <h3>Данные об автомобиле</h3>
+        <table class="table border">
+            <tr>
+                <th scope="row">
+                    Название автомобиля:
+                </th>
+                <td>
+                    {{ Автомобиль }}
+                </td>
+            </tr>
+
+            <tr>
+                <th scope="row">
+                    Годы выпуска:
+                </th>
+                <td>
+                    {{ Год_выпуска }}
+                </td>
+            </tr>
+
+            <tr>
+                <th scope="row">
+                    Комплектация:
+                </th>
+                <td>
+                    {{ Комплектация }}
+                </td>
+            </tr>
+
+            <tr>
+                <th scope="row">
+                    Название комплектации:
+                </th>
+                <td>
+                    {{ Название_комплектации }}
+                </td>
+            </tr>
+
+            <tr>
+                <th scope="row">
+                    Тип двигателя:
+                </th>
+                <td>
+                    {{ Тип_двигателя }}
+                </td>
+            </tr>
+
+            <tr>
+                <th scope="row">
+                    Объем двигателя:
+                </th>
+                <td>
+                    {{ Объем_двигателя }}
+                </td>
+            </tr>
+
+            <tr>
+                <th scope="row">
+                    Тип трансмиссии  
+                </th>
+                <td>
+                    {{ Тип_трансмиссии }}
+                </td>
+            </tr>
+        </table>
+
+        <h3>Данные тестирования</h3>
+        
+        <table class="table border">
+            {{ test_data }}
+        </table>
+
+    </div>
+
+    </div> <!-- /container -->
+
+
+</body>
+
+</html>
